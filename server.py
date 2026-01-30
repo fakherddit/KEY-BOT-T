@@ -12,8 +12,8 @@ from threading import Thread
 # 1. Get your Bot Token from BotFather
 # 2. Add it to Render Environment Variables as 'BOT_TOKEN'
 #    OR replace it directly here (Not recommended for public repos)
-BOT_TOKEN = os.environ.get('BOT_TOKEN')
-ADMIN_ID = int(os.environ.get('ADMIN_ID', '0'))
+BOT_TOKEN = '8216359066:AAEt2GFGgTBp3hh_znnJagH3h1nN5A_XQf0'
+ADMIN_ID = 7210704553
 
 if not BOT_TOKEN:
     raise RuntimeError("BOT_TOKEN env var is required")
@@ -376,6 +376,10 @@ def run_flask():
     # Helper to clean port execution
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
+# --- GUNICORN ENTRYPOINT ---
+# This allows gunicorn to find the Flask app
+wsgi_app = app
 
 if __name__ == '__main__':
     # Start Flask in separate thread so Bot works too
