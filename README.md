@@ -10,6 +10,8 @@ KEY-BOT-T is a Python-based bot that provides basic key management functionality
 - Remove keys
 - List all stored keys
 
+**⚠️ Security Notice**: This is a simple in-memory implementation intended for educational purposes. All data is stored in plain text in memory and is lost when the program exits. **DO NOT use this for storing sensitive credentials or production data.**
+
 ## Installation
 
 No external dependencies are required. Simply clone the repository:
